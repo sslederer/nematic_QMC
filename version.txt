@@ -1,0 +1,17 @@
+18. Fixed bug at finite qy in cccf2. Added a variable (set to 4) for maximal number of momenta to store in cccf2.
+17. Removed the Gk1k2 transform, for now. Now writing full r dependence of the nematic correlators at equal time and beta/2. I also changed the maximal q for the frequency dependese to \pi (so that all q's are written down).
+16. Added a measurement of P_vertex. Not tested. Minor bug fixed - tdgf was not being allocated.
+15. Added real number support to the measurements.
+14. Fixed bugs in the fermionic nematic correlation function. Added a measurement of the 'crossed' susceptibility. Added a way to find the bond number from a real space index to the kin_mat structure. Tested for non-interacting systems. Fixed Fx. assign bosonic action only if local_int.
+13. Added the first few non-zero q's to the calculation of CCCF2. Added a measurement of the fermionic nematic correlator for several q's and omegas.
+12. Fixed a bug in the calculation of the total magnetization in write_out: when using sum(eta), since the type of eta is int8, there was sometimes an overflow.
+11. Added writing the density at write_out.
+10. combined the flux and the non-flux code.
+9. Fixed some minor bugs related to the bosonic action.
+8. added a maximal/minimal value for delta.7. Removed the switch for local interactions from the input file. Changed the references to integer() eta to op_type eta, which is determined on compilation using make.py.
+6. Added adjustment of delta (step size for local interaction). Occurs up to n_eq. Added the appropriate switch (is_local_int) to use either the old subroutines or the new.
+5. Added u1, u2 to the input file, set their default value to 0.
+4. Added a calcuation of the bare bosonic action (the inversion part seems to work fine), subroutines to calculate the action difference (delta_S_eta_new) and the total bosonic action (calc_S_phi_new). Not tested.
+3. Changed update_G to take in the new and old values of eta. Tested to give exactly the same numbers. A bug was found and fixed in det_ratio - it was missing a complex conjugation (so it has an effect with flux). The error this caused was of order 0.1% in the det ratios.
+2. Changed det_ratio to take in the new and old values of eta. Tested to give exactly the same numbers.
+1. Using version 86 of the transverse-field code.
